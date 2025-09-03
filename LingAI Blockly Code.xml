@@ -1,0 +1,3637 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="IntentCandidate" id="0Lb=1CEQ.TO0@,oF6.w#">sentence</variable>
+    <variable type="IntentCandidate" id="v0?s;vjQkrJlmP-gcmff">sentence2</variable>
+    <variable type="IntentCandidate" id="D8,4!7)HyhQCF8l~nUOX">fsenten</variable>
+    <variable type="IntentCandidate" id="mA42/A)VqjU5FtWo(D)3">fsenten2</variable>
+    <variable type="IntentCandidate" id="vK8zn?`0PAJ~AfOP,n!?">fsentenc12</variable>
+    <variable type="IntentCandidate" id="pg,Jym7nLns3#-Gm;COc">fsenten22</variable>
+    <variable type="IntentCandidate" id="!OyH9x`.Gq3KUvP;cXd8">ssenten12</variable>
+    <variable type="IntentCandidate" id="6pLB34B7rvD#lP:@(:I2">ssenten22</variable>
+    <variable type="GenericValue" id="PI3j]v,]2oV3c_4Gw-^^">name</variable>
+  </variables>
+  <block type="state" id="WKOKNYY_AA9j+np#z3?#" deletable="false" editable="false" x="-2098" y="-1147">
+    <field name="stateName">start</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="4L3%x_K-FED$$wt11tAK">
+        <statement name="utterance">
+          <block type="utt_text" id="KC6XgW,pdJ[hbd8W=1Q+">
+            <field name="text">Do you want me to be strict or friendly in your teaching method?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="-CTFRdVlQTTnVC#)T.BR">
+        <field name="responseText">strict</field>
+        <statement name="actions">
+          <block type="say_utterance" id="L6zFeA%+Q}se{p`=@Z|Y">
+            <statement name="utterance">
+              <block type="utt_text" id="2^CAI@s}vEs6zW8S=d!H">
+                <field name="text">I will now talk in a strict manner.</field>
+              </block>
+            </statement>
+            <next>
+              <block type="action_wait" id=",cw6DDpOX8V]`0ceeMVz">
+                <field name="delay">5000</field>
+                <next>
+                  <block type="goto" id="21^I#HvVW/pt,#Qdr9pQ">
+                    <field name="stateName">strict</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="1ZLTZ|dNQ.t,)-Z4pX-G">
+            <field name="responseText">friendly</field>
+            <statement name="actions">
+              <block type="say_utterance" id="sF/#EzO?ez8BydgUvZMZ">
+                <statement name="utterance">
+                  <block type="utt_text" id="iR1lpfI:qgc6[vz%1Kc`">
+                    <field name="text">I will now be in a friendly manner.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_wait" id="!VZzOlvk_YVN5NDvrVTm">
+                    <field name="delay">5000</field>
+                    <next>
+                      <block type="goto" id="jLtW/=2ZmweGc04a8sQU">
+                        <field name="stateName">friendly</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="i=fp{03s[rvcqbDZm7hr" x="-2372" y="-788">
+    <field name="stateName">strict</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="yGfb)}cbJ[[dK,w_hkG/">
+        <statement name="utterance">
+          <block type="utt_text" id="xV(hEgc.6T(/cKw8ms|B">
+            <field name="text">Hello, I am your Dutch teaching assistant 'Ling'. Do need some assistance for Dutch language?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_intent" id="CC__ux;rTaWs:;jeO9rr">
+        <value name="intent">
+          <block type="intent_yes" id="ow=k~-Mh|MT6%4Dt{I;*"></block>
+        </value>
+        <statement name="actions">
+          <block type="say_utterance" id="KHfvp643QX6TDJLal(2S">
+            <statement name="utterance">
+              <block type="utt_text" id="_u,uvt);i8aI@8]Ekfvx">
+                <field name="text">Dutch, also known as</field>
+              </block>
+            </statement>
+            <next>
+              <block type="action_voice" id=")(^vA6*psF?ytb^sk%^=">
+                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                <next>
+                  <block type="say_utterance" id="J[;iA{gSkg4?{ef`B*Ul">
+                    <statement name="utterance">
+                      <block type="utt_text" id="x.[,R-+)J30%=wI(p`wr">
+                        <field name="text">Nederlands</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="action_voice" id="pFqEj$7cA*,l%ISG1^k,">
+                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                        <next>
+                          <block type="say_utterance" id="6g1=H3aUshvjz-XEAyHe">
+                            <statement name="utterance">
+                              <block type="utt_text" id="#CeWBHmQ|=rKE}QC4i$G">
+                                <field name="text">is phonetic language spoken by over 23 million people worldwide. It is the official language of the Netherlands and one of the official languages of Belgium. Dutch has its distinctive pronunciation, particularly the sounds represented by 'g', 'j', and 'v'. The 'j' sound is pronounced like the English 'y'. The 'g' sound however, is often pronounced with a guttural sound similar to clearing one's throat. It's pronounced as:</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="action_voice" id="JN5kWSfg0|.W7bl_NeVG">
+                                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                <next>
+                                  <block type="say_utterance" id=".=OKm}m.zzYQ|!JJqCOG">
+                                    <statement name="utterance">
+                                      <block type="utt_text" id="*!5X`*}WaRHw$buizlbR">
+                                        <field name="text">g</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="action_voice" id="_[)Ziyi.PUcGY;Z-~0PD">
+                                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                        <next>
+                                          <block type="say_utterance" id="SmvY2~$v`V+iw/9fx6=E">
+                                            <statement name="utterance">
+                                              <block type="utt_text" id="7}XZ3}l)]WCwVk)BQST!">
+                                                <field name="text">and the 'v' sound is similar to the English 'v' but sometimes softer. Somewhere between 'v' and 'f'. Just like:</field>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="action_voice" id="eZsp@(o65lnc8d=s4@{H">
+                                                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                <next>
+                                                  <block type="say_utterance" id="Ay^UsL_V$whfEeXXE~{y">
+                                                    <statement name="utterance">
+                                                      <block type="utt_text" id="n00`l*t6++U^N(.0YyT|">
+                                                        <field name="text">v</field>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="action_voice" id="c,a%{1q`1Ac;ZK.:xXp,">
+                                                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                        <next>
+                                                          <block type="say_utterance" id="`^6{coH9_r=CRVG|fmiJ">
+                                                            <statement name="utterance">
+                                                              <block type="utt_text" id="M+0pU`)GL+R$ui{mizXM">
+                                                                <field name="text">Keep in mind that there are more different pronunciations dutch compared to english. You don't have to learn all of them since this is a simple introductuary. Now we have learned pronunciations, let's learn some words.</field>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="goto" id="dADLboChKK~Al+O/)+$d">
+                                                                <field name="stateName">swords</field>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="NP;3+9%F*kJj=M+!M|Ii" x="-1803" y="-811">
+    <field name="stateName">friendly</field>
+    <statement name="actions">
+      <block type="action_gesture_param" id="JLI^HeB2FbDsa$nq~2KY">
+        <field name="gesture">BigSmile</field>
+        <value name="strength">
+          <shadow type="text" id="^k9@D:1|T;Me*B6~)6er">
+            <field name="value">1.0</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="text" id="z7D)!A(Ko4K:/8Cmo/f:">
+            <field name="value">5.0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="ask_utterance" id="S#=.62OWV^rQ.JS@3_%z">
+            <statement name="utterance">
+              <block type="utt_text" id="((eqs9:3gG%gq!Lux`uX">
+                <field name="text">Hello, I am your Dutch  teaching assistant 'Ling'. What do you want me to call you?</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_any" id="35V:#7aghONs+Q]k27v5">
+        <statement name="actions">
+          <block type="variable_set" id="_?2H!}}Hu0%fIu{{aY65">
+            <field name="variable" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+            <value name="value">
+              <block type="text_repeat_user" id="FYJ:ZcKXg{4Tn@A?o,XX"></block>
+            </value>
+            <next>
+              <block type="say_utterance" id="saDd/#SsP7E%_-bfNt)5">
+                <statement name="utterance">
+                  <block type="utt_text" id="xNqVt?2R#FP}pnB|hi0F">
+                    <field name="text">Hello </field>
+                    <next>
+                      <block type="utt_value" id="wy;DIir]K!2}c`kufOw7">
+                        <value name="value">
+                          <block type="variable_get" id="w9ST)R=@=3OW.6/7.EdN">
+                            <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="utt_text" id="Md|-f)[Pd%C]{vHY;84{">
+                            <field name="text">Would you like some Dutch learning assistance from me?</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="listen" id="]txaeyXP7t99z5dJR!jw"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="y3.;947n%/=e/d}wI2K:">
+            <value name="intent">
+              <block type="intent_yes" id="3-SptB2UaO-=,)#$/TZe"></block>
+            </value>
+            <statement name="actions">
+              <block type="action_gesture_param" id="bxD7P_ou#PHR:DB!R`63">
+                <field name="gesture">BigSmile</field>
+                <value name="strength">
+                  <shadow type="text" id="YR#)BpP!ztq`c9Fzb5l4">
+                    <field name="value">1.0</field>
+                  </shadow>
+                </value>
+                <value name="duration">
+                  <shadow type="text" id="!,vhyu1uWR|{440E@#gX">
+                    <field name="value">5.0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="say_utterance" id=")=*PX$gusg_sx}1RN8%8">
+                    <statement name="utterance">
+                      <block type="utt_text" id="C!d+O83(c|~K)e!+)H{E">
+                        <field name="text">Welcome to the world of Dutch! Dutch, also known as</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="action_voice" id="nlGdz*$7avC9a[w(ao#*">
+                        <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                        <next>
+                          <block type="say_utterance" id="t.6!)Q|V4cJ-xl/8t[C2">
+                            <statement name="utterance">
+                              <block type="utt_text" id="c~KAP4bqut?R+Qn,vVwb">
+                                <field name="text">Nederlands</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="action_voice" id="x:_l$xg]O$cMIAMAb%=G">
+                                <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                <next>
+                                  <block type="say_utterance" id="{XcpU0i1u;84t.7;DDGO">
+                                    <statement name="utterance">
+                                      <block type="utt_text" id="XOE4Jx^+pk%EFH.Eso5.">
+                                        <field name="text">is phonetic language spoken by over 23 million people worldwide. It is the official language of the Netherlands and one of the official languages of Belgium. Dutch has its distinctive pronunciation, particularly the sounds represented by 'g', 'j', and 'v'. The 'j' sound is pronounced like the English 'y'. The 'g' sound however, is often pronounced with a guttural sound similar to clearing one's throat HAHA. It's pronounced as:</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="action_voice" id="vRcbmt*]Q3|/_b!lr=18">
+                                        <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                        <next>
+                                          <block type="say_utterance" id="k:7Sd374Y=u+t]Nqx/ME">
+                                            <statement name="utterance">
+                                              <block type="utt_text" id="25zzNhq*T+G[b?+RPKg8">
+                                                <field name="text">g</field>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="action_voice" id="=|zJrk[V@C?f3^B,8=Yz">
+                                                <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                <next>
+                                                  <block type="say_utterance" id="Q7YUIwBKQhj}ScYj7|92">
+                                                    <statement name="utterance">
+                                                      <block type="utt_text" id="4:]GblCP+8+:|0hUDw7f">
+                                                        <field name="text">You might struggle with this one but don't worry, practice all matters. The 'v' sound is similar to the English 'v' but sometimes softer. Somewhere between 'v' and 'f'. Just like:</field>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="action_voice" id="jD)qcslGG/,3$AQJ[d^I">
+                                                        <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                        <next>
+                                                          <block type="say_utterance" id="tN0P1Yyd!*T;!E13iU[D">
+                                                            <statement name="utterance">
+                                                              <block type="utt_text" id="ekKelD4(6X:6osAj-7H$">
+                                                                <field name="text">v</field>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="action_voice" id="fI_=|3TQXKs~cB/6-F2N">
+                                                                <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                <next>
+                                                                  <block type="say_utterance" id="kzfv#xCK=Sp)7O]TW1Bu">
+                                                                    <statement name="utterance">
+                                                                      <block type="utt_value" id="H_e1+mY.Tg9#:D:5O[5C">
+                                                                        <value name="value">
+                                                                          <block type="variable_get" id="[q~Q:Ae@VxL|-*Sd+%gc">
+                                                                            <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="utt_text" id="YPAEZEv}orAhJjaURY~V">
+                                                                            <field name="text">Keep in mind that there are more different pronunciations dutch compared to english. You don't have to learn all of them since human brain capacity is limit in short time HAHA.. Now we have learned pronunciations, let's learn some words shall we?</field>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </statement>
+                                                                    <next>
+                                                                      <block type="goto" id="R+3z9/zeM0oO3qCk-$t7">
+                                                                        <field name="stateName">fwords</field>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="Y1g?)dPEOJG({To[a{6l" x="-5098" y="-397">
+    <field name="stateName">swords12</field>
+    <statement name="actions">
+      <block type="say_utterance" id="uJ;E%37rFTu!N`*n}j6|">
+        <statement name="utterance">
+          <block type="utt_text" id="=Vy1WOA@nZ0|#VNkHrd)">
+            <field name="text">Here are some dutch phrases. Try to memorise them.</field>
+          </block>
+        </statement>
+        <next>
+          <block type="say_utterance" id="cN#-(P/@!V#`X1PTi2k~">
+            <statement name="utterance">
+              <block type="utt_text" id="*[^%T]qcUd5R`wr:iI1=">
+                <field name="text">'How is it going?' means</field>
+              </block>
+            </statement>
+            <next>
+              <block type="action_voice" id=");w~I9kQ,Oy?5RN;GN(J">
+                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                <next>
+                  <block type="say_utterance" id="ar69Zo_ZjG4jr4@{5bqR">
+                    <statement name="utterance">
+                      <block type="utt_text" id="bu^W[v(KyQoH-~|gl9[U">
+                        <field name="text">Hoe gaat het?</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="action_wait" id="LH_tGWkOaA.}1|-9Vqx3">
+                        <field name="delay">1000</field>
+                        <next>
+                          <block type="action_voice" id="m^d{AnDPKUi#QdX4XigY">
+                            <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                            <next>
+                              <block type="say_utterance" id="Kp?3#JFNfju%5e=2-las">
+                                <statement name="utterance">
+                                  <block type="utt_text" id="r5Y);;vLWi1gW=kj$Hj,">
+                                    <field name="text">'thank you' means</field>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="action_voice" id="d[6ih`s0c+H0k3ojjE_L">
+                                    <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                    <next>
+                                      <block type="say_utterance" id="Cd{-lYTDzc0MrRh@XAL|">
+                                        <statement name="utterance">
+                                          <block type="utt_text" id="^yp[Qs{)e#`hAD1Do_lf">
+                                            <field name="text">dank je wel</field>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="action_wait" id="{kwh9!r~Godr/Tp!O2,N">
+                                            <field name="delay">1000</field>
+                                            <next>
+                                              <block type="action_voice" id="+@G_TBPp)Ydl/,VKA-_2">
+                                                <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                <next>
+                                                  <block type="say_utterance" id="MK6(efdijA5sf,dX}JPF">
+                                                    <statement name="utterance">
+                                                      <block type="utt_text" id="JU4*CSwd*k/L9Qe,PuE4">
+                                                        <field name="text">'Not so well' means</field>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="action_voice" id="OCLVDTmMOwfCN68J_tGx">
+                                                        <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                        <next>
+                                                          <block type="say_utterance" id="Q9+jp{Y}VCk)({w4[uD[">
+                                                            <statement name="utterance">
+                                                              <block type="utt_text" id="2}9+-Y{kP8*4xM2.4gE9">
+                                                                <field name="text">niet zo goed</field>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="action_wait" id="|/5J}Ub.8wm9:j1*f5rC">
+                                                                <field name="delay">1000</field>
+                                                                <next>
+                                                                  <block type="action_voice" id="GmDRU.ee3z}J%xoIRnSH">
+                                                                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                    <next>
+                                                                      <block type="say_utterance" id="bA{,zkUk~jt#lz)E=]Qa">
+                                                                        <statement name="utterance">
+                                                                          <block type="utt_text" id="ef2g?S6q];YXMF_K9K]|">
+                                                                            <field name="text">'bye' means</field>
+                                                                          </block>
+                                                                        </statement>
+                                                                        <next>
+                                                                          <block type="action_voice" id="?#WlI3t:_GFY~1V(w}]}">
+                                                                            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                                            <next>
+                                                                              <block type="say_utterance" id="6(IT~yMty*SnzF~l7[|q">
+                                                                                <statement name="utterance">
+                                                                                  <block type="utt_text" id="*gvsndR{S0d*!TqaO);a">
+                                                                                    <field name="text">doei</field>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <next>
+                                                                                  <block type="action_wait" id="b[G?lC0=fB)@mKF14tu$">
+                                                                                    <field name="delay">1000</field>
+                                                                                    <next>
+                                                                                      <block type="action_voice" id="?^w#s#gbV{uPr^0aHYDa">
+                                                                                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                                        <next>
+                                                                                          <block type="say_utterance" id="O6ALJq7b{6gA=5sI6E?7">
+                                                                                            <statement name="utterance">
+                                                                                              <block type="utt_text" id="OVLp#KlXksfq!qQSN8(m">
+                                                                                                <field name="text">Now I will quiz you again. Hope you are ready.</field>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                            <next>
+                                                                                              <block type="goto" id="p4v?~x;nPJ!7l/t9L|={">
+                                                                                                <field name="stateName">swords22</field>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id="%.f|e#$R+dr?l|mz4G+q" x="-5448" y="-377">
+    <field name="stateName">swords22</field>
+    <statement name="actions">
+      <block type="say_utterance" id="@`Sf_*x?+ogh(o4J)lJC">
+        <statement name="utterance">
+          <block type="utt_text" id="K-DR.F=/|%a!4yi)y3?y">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="=3Vp#c1f$EN.ut|UEQOn">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="|q~R;$LH+#)E-paOJ[:U">
+                <statement name="utterance">
+                  <block type="utt_text" id=",S-94b04WB0nEruN)[!g">
+                    <field name="text">niet zo goed</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="cgY$y6Kd9vEWx]*6+,!|">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="OBmLCqF]v2}L/(I1BfEI">
+                        <statement name="utterance">
+                          <block type="utt_text" id="vtl*i~bdWFI]53|!AFs=">
+                            <field name="text">mean in English?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="$A-@MwAES9{}gb^uo[3T">
+        <field name="responseText">Not so well</field>
+        <statement name="actions">
+          <block type="say_utterance" id="04X.d1Gxhmf?N^K!:BnT">
+            <statement name="utterance">
+              <block type="utt_text" id=";UzO5hr?sjd6`K_;,YQf">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="]Pz$AFh:E]IZjwQp$ln3">
+                <field name="stateName">swords32</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="7qE}$g]F[j%,dA+chu(,">
+            <statement name="actions">
+              <block type="say_utterance" id="xgNL_8b-DxTbOav0`d}3">
+                <statement name="utterance">
+                  <block type="utt_text" id="$fOz_QTfH3q3)Lqont~9">
+                    <field name="text">That is not correct. It means 'Not so well'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="cImsE`Zx=1dHJz!4L~n;">
+                    <field name="stateName">swords32</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="9RpP7F@xppYX:pDK0[zV" x="-3491" y="-415">
+    <field name="stateName">swords2</field>
+    <statement name="actions">
+      <block type="say_utterance" id="N,fmmq6IK15gRc$mR@az">
+        <statement name="utterance">
+          <block type="utt_text" id="[l%Y)vgjfL$yQl(i1$uZ">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="D7D5;*G,7CUJ%LA|6ti+">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="bq|4u+s^?jR=cpLQUug~">
+                <statement name="utterance">
+                  <block type="utt_text" id="gB4CZ8)7:_`T[wG-]_|r">
+                    <field name="text">student</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="FFuoS#+Ct0T*whZ8V54:">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="5+DIk*XX}I3dS^ge9X$K">
+                        <statement name="utterance">
+                          <block type="utt_text" id="dqP7i)loo?,ap)`K1$I.">
+                            <field name="text">mean in English?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="SyYo{T89Oi7byC:8OgK1">
+        <field name="responseText">student</field>
+        <statement name="actions">
+          <block type="say_utterance" id="[yzXSk+LCQ[lpltXaXIY">
+            <statement name="utterance">
+              <block type="utt_text" id="x?-6D|sgkc7Ruh-jR^C;">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="d0=+@u9q|xme1rr7,Zq.">
+                <field name="stateName">swords3</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="9rA]4Q{MQv37,m2+5|_a">
+            <statement name="actions">
+              <block type="say_utterance" id="XZDMBfD5z-SvVAG;1^0d">
+                <statement name="utterance">
+                  <block type="utt_text" id="5dRbZS(sk4RsGr$fWCd=">
+                    <field name="text">That is not correct. It means student.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="NtgEDUyF=ZC[rX=jGgPa">
+                    <field name="stateName">swords3</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="Y,*,9lM3IbR6iB[`WD)d" x="-3140" y="-425">
+    <field name="stateName">swords</field>
+    <statement name="actions">
+      <block type="say_utterance" id="%w0DrO;+0fppW9Jt~9Dv">
+        <statement name="utterance">
+          <block type="utt_text" id="7dGpY~zKuNd+@XaJY20@">
+            <field name="text">Here are some dutch words. Try to memorise them.</field>
+          </block>
+        </statement>
+        <next>
+          <block type="say_utterance" id="t}6s(YIFHA#/:{(}L4!Z">
+            <statement name="utterance">
+              <block type="utt_text" id="UW{dMK4-}mjy1||95k%k">
+                <field name="text">'I am' means</field>
+              </block>
+            </statement>
+            <next>
+              <block type="action_voice" id="dAk7=bLy7R0IOQ,_uvml">
+                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                <next>
+                  <block type="say_utterance" id="O`rFNZ^TyE_55oJvt]+5">
+                    <statement name="utterance">
+                      <block type="utt_text" id="4(c]M%UK_eic1NfoYg(.">
+                        <field name="text">Ik ben</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="action_wait" id="ujpr;TTo/lstJ2uE_LY6">
+                        <field name="delay">1000</field>
+                        <next>
+                          <block type="action_voice" id="+K8F^#_:+lm=m;(yy?T%">
+                            <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                            <next>
+                              <block type="say_utterance" id="hVKf5Usc.R~f:EbgL-:+">
+                                <statement name="utterance">
+                                  <block type="utt_text" id="+pM^$hjp6yUgv|QKU:JW">
+                                    <field name="text">'student' means</field>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="action_voice" id="B;iXwAa_0J#@`!bfyrO9">
+                                    <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                    <next>
+                                      <block type="say_utterance" id="a?SAdW/eDh*jo=[AV^!f">
+                                        <statement name="utterance">
+                                          <block type="utt_text" id="XOJoV$g]n,!yQ7e[}GaJ">
+                                            <field name="text">student</field>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="action_wait" id="-4=PPPt1*jAG!l3[Vm%;">
+                                            <field name="delay">1000</field>
+                                            <next>
+                                              <block type="action_voice" id="iTrV0JB^0956Pmh!sKgw">
+                                                <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                <next>
+                                                  <block type="say_utterance" id="#]8%Pc[_T5:`u!W)3-Jz">
+                                                    <statement name="utterance">
+                                                      <block type="utt_text" id="Qd^`LtBb@T_u[KF+Sv8]">
+                                                        <field name="text">'nice' means</field>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="action_voice" id="Qb$.f?;7Rp(]%[[.tDO3">
+                                                        <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                        <next>
+                                                          <block type="say_utterance" id="Ooao;:-Kij*sjHG=lEY1">
+                                                            <statement name="utterance">
+                                                              <block type="utt_text" id="-x^1YeJjy5qYk/a=YYiA">
+                                                                <field name="text">gezellig</field>
+                                                              </block>
+                                                            </statement>
+                                                            <next>
+                                                              <block type="action_wait" id="h-JP{vJU@:+ej8cyv-E2">
+                                                                <field name="delay">1000</field>
+                                                                <next>
+                                                                  <block type="action_voice" id="]]g!8^jeUl8|;Nt|S_?~">
+                                                                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                    <next>
+                                                                      <block type="say_utterance" id="Sx7(?|3~3DkB?Pr0l9~3">
+                                                                        <statement name="utterance">
+                                                                          <block type="utt_text" id="tc#gQ,9;]AQd{boE:DBP">
+                                                                            <field name="text">'class' means</field>
+                                                                          </block>
+                                                                        </statement>
+                                                                        <next>
+                                                                          <block type="action_voice" id="1_]+YgzYbrPNaXBn6jkv">
+                                                                            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                                            <next>
+                                                                              <block type="say_utterance" id="EW:A[47cPG+55?mhF),`">
+                                                                                <statement name="utterance">
+                                                                                  <block type="utt_text" id="LFxZG@^[c$nol)#^_5z1">
+                                                                                    <field name="text">klas</field>
+                                                                                  </block>
+                                                                                </statement>
+                                                                                <next>
+                                                                                  <block type="action_wait" id="O-8E_(B0SgwyX[[J1@#R">
+                                                                                    <field name="delay">1000</field>
+                                                                                    <next>
+                                                                                      <block type="action_voice" id="4P1I2{[LDA8RCkCg8_1G">
+                                                                                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                                        <next>
+                                                                                          <block type="say_utterance" id="qypFH=Dt_OF#^LeOB^Rw">
+                                                                                            <statement name="utterance">
+                                                                                              <block type="utt_text" id="=2e#1{%vmn]7ej9[XKmy">
+                                                                                                <field name="text">Now I will quiz you. Be aware that I might not recognize your words so please speak clearly.</field>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                            <next>
+                                                                                              <block type="goto" id="|YIj3.bJ`Q}@F?kUf0oA">
+                                                                                                <field name="stateName">swords2</field>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id="brH5-Fi(tt0OF^kamgrv" x="-1013" y="-520">
+    <field name="stateName">fwords</field>
+    <statement name="actions">
+      <block type="action_gesture_param" id="j2!UHU|;jtC7TAP3d33q">
+        <field name="gesture">BigSmile</field>
+        <value name="strength">
+          <shadow type="text" id="3Eq)%YKV?7RqA7OOrZe+">
+            <field name="value">1.0</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="text" id="-jtV|}R^6UPi@WUN^Ai2">
+            <field name="value">5.0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="say_utterance" id="qJwKgW+$G42A+Kb`~o+Y">
+            <statement name="utterance">
+              <block type="utt_value" id="==/8V:Z+H[$5{(xMg{12">
+                <value name="value">
+                  <block type="variable_get" id="sk5qKTzbQu__9*lB;W%H">
+                    <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="utt_text" id="]@{FK3OsLF`kO8Bnml:E">
+                    <field name="text">Here are some dutch words. Try to memorise them. I believe in you.</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="say_utterance" id="{}d%cL0HqKMD.bMR:2Y6">
+                <statement name="utterance">
+                  <block type="utt_text" id="q2wR!M-Vp.vNDC*W7GKB">
+                    <field name="text">'My name is' means</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="7%dwj;Ut)wdiKTqV?y6a">
+                    <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                    <next>
+                      <block type="say_utterance" id="r6g[W$C|SGsuQN~VP}oz">
+                        <statement name="utterance">
+                          <block type="utt_text" id=";BhK,WWc2=1pcu09eMu_">
+                            <field name="text">Ik heet</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="action_wait" id="6b^*x!Kf9X7K2*WiJtsh">
+                            <field name="delay">1000</field>
+                            <next>
+                              <block type="action_voice" id="p4;Hi/Al?H,mHeJ|cKEp">
+                                <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                <next>
+                                  <block type="say_utterance" id="[)3@05.S%1!-hM]=!mw2">
+                                    <statement name="utterance">
+                                      <block type="utt_text" id="f;tzI|v3s(xWrPt*lC(a">
+                                        <field name="text">'good' means</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="action_voice" id="xq$;[=p@w.%c.HDpJV/y">
+                                        <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                        <next>
+                                          <block type="say_utterance" id="]yLGKIpO1CVnr5+y+Eq/">
+                                            <statement name="utterance">
+                                              <block type="utt_text" id="6^GJIX-emJic5[.=#43Y">
+                                                <field name="text">goed</field>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="action_wait" id="6PJu8vlx?;4RYnPB_a.2">
+                                                <field name="delay">1000</field>
+                                                <next>
+                                                  <block type="action_voice" id="|z(N!`ivKa`i$Yg#[i2J">
+                                                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                    <next>
+                                                      <block type="say_utterance" id="o6X+Ojii46T9}|;rH0|t">
+                                                        <statement name="utterance">
+                                                          <block type="utt_text" id="=]!Of^4UXHGY-uK4;VQM">
+                                                            <field name="text">'day' means</field>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="action_voice" id="0!d:_AYK[1|]~b5nqfSY">
+                                                            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                            <next>
+                                                              <block type="say_utterance" id="qnaR+{!*oby/.VyE3zYT">
+                                                                <statement name="utterance">
+                                                                  <block type="utt_text" id="9k+ApxE#@tM`SkIBDHsF">
+                                                                    <field name="text">dag</field>
+                                                                  </block>
+                                                                </statement>
+                                                                <next>
+                                                                  <block type="action_wait" id="mi{=DqH-Pb/Q!nm,nnJD">
+                                                                    <field name="delay">1000</field>
+                                                                    <next>
+                                                                      <block type="action_voice" id="M,(QbQD;1.c8C]L$jj^@">
+                                                                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                        <next>
+                                                                          <block type="say_utterance" id="g@*%%GtAX9pJqdHpz~X9">
+                                                                            <statement name="utterance">
+                                                                              <block type="utt_text" id="~jl@%_Qp4MF4,0WsU2dW">
+                                                                                <field name="text">'fine' means</field>
+                                                                              </block>
+                                                                            </statement>
+                                                                            <next>
+                                                                              <block type="action_voice" id="wEwCG#0k{}q`7d2tG]jE">
+                                                                                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                                                <next>
+                                                                                  <block type="say_utterance" id="weIqob{lH8/.qxw*PM]o">
+                                                                                    <statement name="utterance">
+                                                                                      <block type="utt_text" id="_GesD9WrmK~OD[5con:C">
+                                                                                        <field name="text">fijne</field>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                    <next>
+                                                                                      <block type="action_wait" id="(D2Em]u.J+{l[ztLW$25">
+                                                                                        <field name="delay">1000</field>
+                                                                                        <next>
+                                                                                          <block type="action_voice" id="i)%_6j_7,`OVsCEO2#p|">
+                                                                                            <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                                            <next>
+                                                                                              <block type="say_utterance" id="^yfp.k%Wtha}cC?:}2p~">
+                                                                                                <statement name="utterance">
+                                                                                                  <block type="utt_value" id="Fz|^EZkuf`AkHrNFjRY0">
+                                                                                                    <value name="value">
+                                                                                                      <block type="variable_get" id="8v+r]@f`OV:TUfYRO-yR">
+                                                                                                        <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="utt_text" id="goTC~kSpOIi8}ps%)mf9">
+                                                                                                        <field name="text">I hope you have memorised them all. Now I will quiz you. Be aware that I might not recognize your words so please speak clearly.</field>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </statement>
+                                                                                                <next>
+                                                                                                  <block type="action_gesture_param" id="r+%FZ2ja2kJGco);B7m@">
+                                                                                                    <field name="gesture">BigSmile</field>
+                                                                                                    <value name="strength">
+                                                                                                      <shadow type="text" id="$i2_r-ZsV*r6@3dr-,nV">
+                                                                                                        <field name="value">1.0</field>
+                                                                                                      </shadow>
+                                                                                                    </value>
+                                                                                                    <value name="duration">
+                                                                                                      <shadow type="text" id="FTB,;CcGYYgVXVKN];Ed">
+                                                                                                        <field name="value">5.0</field>
+                                                                                                      </shadow>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="goto" id="(Sb{)8ubW.SO)XGPaC%P">
+                                                                                                        <field name="stateName">fwords2</field>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id="gSZ-SYs5HkSgpYqmVA/+" x="-605" y="-501">
+    <field name="stateName">fwords2</field>
+    <statement name="actions">
+      <block type="say_utterance" id="FN~v5,yN:,Yo?^{OQ|9n">
+        <statement name="utterance">
+          <block type="utt_text" id="}fmI{dTNMnzd2B$;_D;X">
+            <field name="text">Here we start: What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="I^O]q!|W_!r%SxQVG6n7">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="?UVr2BTT|}|f-21/):*p">
+                <statement name="utterance">
+                  <block type="utt_text" id="bLl9|u:S4hOW,aVNHx!{">
+                    <field name="text">dag</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="1kn#R`uF/;3=!wG!pg*p">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="O_|f+Wgu/lQx0Wi3Yt|k">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="Oi)}qNj|D{[B9mD`5!]P">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="?jlYh!0;GiU)v?0G=60=">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="ask_utterance" id="`Wnf,So9zO8jJM[eCNc2">
+                            <statement name="utterance">
+                              <block type="utt_text" id="CzrysLk4;L6`,ol*Lvw{">
+                                <field name="text">mean in English?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="lYs.JgcuWo$aqg1{*8nX">
+        <field name="responseText">day</field>
+        <statement name="actions">
+          <block type="say_utterance" id="dWXaBY.zF)9NB3VZV|hB">
+            <statement name="utterance">
+              <block type="utt_text" id="Lj#LyW5NxbY`I#!OLH6B">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="=Z!0!HY/)B`CL~^9VL+O">
+                <field name="stateName">fwords3</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="jrB2=-!w:4Y^Q!@=#{c8">
+            <statement name="actions">
+              <block type="say_utterance" id="d568A?BNGA0JdQzgf/z#">
+                <statement name="utterance">
+                  <block type="utt_text" id="b94iL8.*5@(iN#l1EZcP">
+                    <field name="text">I am afraid that's not correct. It means 'good evening'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="Ipvu#l%::Tcoe~Um;rvf">
+                    <field name="stateName">fwords3</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="[N/-$Vu#PzBtWzl^zj:d" x="1034" y="-557">
+    <field name="stateName">friendly2</field>
+    <statement name="actions">
+      <block type="action_gesture_param" id="0i?uvVR+DPHA83?DYo`S">
+        <field name="gesture">BigSmile</field>
+        <value name="strength">
+          <shadow type="text" id="~QgE8Wh0-4M0Cgng_IGY">
+            <field name="value">1.0</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="text" id="hK$LwnGQ~J2Hic]{EVgi">
+            <field name="value">5.0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="say_utterance" id="@W47zy#|ycCN9!,$`:B#">
+            <statement name="utterance">
+              <block type="utt_value" id="u/or%ux%n4]#by-Rx__s">
+                <value name="value">
+                  <block type="variable_get" id="w|(VfO:2?W:SwQG-)(Z3">
+                    <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="utt_text" id="(~E.O{xoIJ/{!g}q3LXB">
+                    <field name="text">Here are some more dutch words. Try to memorise them. Well,</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="action_wait" id="6yyGIn|6mp5N],N[GIc0">
+                <field name="delay">500</field>
+                <next>
+                  <block type="say_utterance" id=")XI]v{_wbb?McK-lDt[m">
+                    <statement name="utterance">
+                      <block type="utt_text" id="p,vpVJ%zL5-_rm!Dhr|c">
+                        <field name="text">we both now  it will be a piece of cake for you!</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="PJ(}8A8JU;W][x%dpJU{">
+                        <statement name="utterance">
+                          <block type="utt_text" id=":_RDp}ibQ}2s+UU`giQt">
+                            <field name="text">Here is the first one: 'you' means</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="action_voice" id="bUT3H/]SI@an,gp?1ElT">
+                            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                            <next>
+                              <block type="say_utterance" id="l4Aby~f+r(km0l[A^=JZ">
+                                <statement name="utterance">
+                                  <block type="utt_text" id="oToIfiq0cwkWDxt:zdrQ">
+                                    <field name="text">je</field>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="action_wait" id="04E:N5+BO9*+r6d`p7~{">
+                                    <field name="delay">1000</field>
+                                    <next>
+                                      <block type="action_voice" id="rd)SXWs5A!sY;J?gJUJ9">
+                                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                        <next>
+                                          <block type="say_utterance" id="UAn]r/*.a,M7H-S?;?rN">
+                                            <statement name="utterance">
+                                              <block type="utt_text" id="E~~#MQR|J#,Gp/FQC;~q">
+                                                <field name="text">'good morning' means</field>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="action_voice" id="?;4]`]nfOic(:$P(GPq;">
+                                                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                <next>
+                                                  <block type="say_utterance" id="nlLx=vxd)h9/m!R!4/kP">
+                                                    <statement name="utterance">
+                                                      <block type="utt_text" id="o7(P?Z@B4eU{f9Krv(2j">
+                                                        <field name="text">goedemorgen</field>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="action_wait" id="8[HD4A6V$h!dH)Qyhjd8">
+                                                        <field name="delay">1000</field>
+                                                        <next>
+                                                          <block type="action_voice" id="j.Uy|!Qxl*Y)Q}#)N._g">
+                                                            <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                            <next>
+                                                              <block type="say_utterance" id="k6{QP_,I)X-VsKW}|XyW">
+                                                                <statement name="utterance">
+                                                                  <block type="utt_text" id="6(~rh8$-:SjKU5@81dU,">
+                                                                    <field name="text">'speak' means</field>
+                                                                  </block>
+                                                                </statement>
+                                                                <next>
+                                                                  <block type="action_voice" id="M8{k5IqvVUS)+BEby0B%">
+                                                                    <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                                    <next>
+                                                                      <block type="say_utterance" id="(z8F%V:b3ThWKa(C:@QQ">
+                                                                        <statement name="utterance">
+                                                                          <block type="utt_text" id="37TwJ~6+ejcg*w9ZMBVp">
+                                                                            <field name="text">spreek</field>
+                                                                          </block>
+                                                                        </statement>
+                                                                        <next>
+                                                                          <block type="action_wait" id="r_Oi+/c/zWl/aA=*IUc|">
+                                                                            <field name="delay">1000</field>
+                                                                            <next>
+                                                                              <block type="action_voice" id="H-D]RmDvLJa}`t_cbe25">
+                                                                                <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                                <next>
+                                                                                  <block type="say_utterance" id="1R6vOdPrN@E,-$wG{~E?">
+                                                                                    <statement name="utterance">
+                                                                                      <block type="utt_text" id="JH/2hDc`NF2wH-kscgM`">
+                                                                                        <field name="text">'Dutch' means</field>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                    <next>
+                                                                                      <block type="action_voice" id=")2V#)A+o9l{EoODL4ECZ">
+                                                                                        <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                                                                                        <next>
+                                                                                          <block type="say_utterance" id="SLq^OJndZ$cN1OSDT4NG">
+                                                                                            <statement name="utterance">
+                                                                                              <block type="utt_text" id="4DH9;}_P[w,}#VO~8s?Q">
+                                                                                                <field name="text">nederlands</field>
+                                                                                              </block>
+                                                                                            </statement>
+                                                                                            <next>
+                                                                                              <block type="action_wait" id="e4vx|l|WD{SW{#j#S@%-">
+                                                                                                <field name="delay">1000</field>
+                                                                                                <next>
+                                                                                                  <block type="action_voice" id="gbkI%W(Ow3eU!dl58@2=">
+                                                                                                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                                                                                                    <next>
+                                                                                                      <block type="say_utterance" id="Y:7=D)]I/;=J2;|+(8Cv">
+                                                                                                        <statement name="utterance">
+                                                                                                          <block type="utt_value" id="WaJXTA$ocKL55K$6M4yt">
+                                                                                                            <value name="value">
+                                                                                                              <block type="variable_get" id="dD^2j?plo?cB?h})yTH@">
+                                                                                                                <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="utt_text" id="Gx}`Z]P3O#cKP]+=b@#{">
+                                                                                                                <field name="text">I hope you have memorised them all. Now is the quiz time.</field>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </statement>
+                                                                                                        <next>
+                                                                                                          <block type="goto" id="IeTB.)b~Is2S}C98,jCy">
+                                                                                                            <field name="stateName">fwords22</field>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id="ki5Bsx5|;%wNfK+A!N(M" x="-6112" y="-168">
+    <field name="stateName">ssentence12</field>
+    <statement name="actions">
+      <block type="say_utterance" id="r6#{9(qAv8}_q2]d4|[#">
+        <statement name="utterance">
+          <block type="utt_text" id="`Bmv)|M`TzWC5]Fz|wPN">
+            <field name="text">Let's learn the phrases we have learned in real life situations. Translate the meaning of this sentence:</field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="M6#.pa%8}6,]HLE[jkk,">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="hDOZ^k65!DL|w:a-u@{]">
+                <statement name="utterance">
+                  <block type="utt_text" id="[/:Mu#76uU-6[B[+yKW6">
+                    <field name="text">'Hoe gaat het?', </field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_wait" id="xlNZXv/ixB!v*smx^?J$">
+                    <field name="delay">1000</field>
+                    <next>
+                      <block type="say_utterance" id="p%%}9]t1eW`rpkPnyR5s">
+                        <statement name="utterance">
+                          <block type="utt_text" id="H!(;ai)]=-a!;!B;6g3@">
+                            <field name="text">'niet zo goed'</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="action_voice" id="yp`GxI7)=Po79h=rDs$Z">
+                            <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                            <next>
+                              <block type="listen" id="-i-+1)RY]w*to=w,ygFO"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="!^%c2vBi*b9PC|6EX$#V">
+        <field name="responseText">How are you? Not so good.</field>
+        <statement name="actions">
+          <block type="say_utterance" id="54WE*m3x[51jy2pz!Zn#">
+            <statement name="utterance">
+              <block type="utt_text" id="PqkIkUVyWT9uY@.ij#Xj">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="%-~=pIvB1Q.(NA*~_MJ^">
+                <field name="stateName">ssentence22</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="mG327N]}vt)~mjRIl{Kf">
+            <value name="intent">
+              <block type="intent_variable" id="`@mi-uOOyaP,#S!AJ`u^">
+                <field name="varname" id="!OyH9x`.Gq3KUvP;cXd8" variabletype="IntentCandidate">ssenten12</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="UgB[rM|)*u~jdY$haQce">
+                <statement name="utterance">
+                  <block type="utt_text" id="T$4@Hxat$jB?sg[t||5S">
+                    <field name="text">That is partially correct. It means 'How are you? Not so good.'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="R.4|.m~alRqX,bF4^]GZ">
+                    <field name="stateName">ssentence22</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="!I[B5Zg@[FK+:(ZGV!N.">
+                <statement name="actions">
+                  <block type="say_utterance" id="aQVcr{1y?lyP[i)|!QIK">
+                    <statement name="utterance">
+                      <block type="utt_text" id="w6f/8?$(H[y,5vXXMZMF">
+                        <field name="text">That is not correct. It means 'How are you? Not so good.'</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="y/Xx4Mr7FTq%O_tbQ1RE">
+                        <field name="stateName">ssentence22</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="e848jc#*rkPuBzP!=#70" x="1501" y="-549">
+    <field name="stateName">fwords22</field>
+    <statement name="actions">
+      <block type="say_utterance" id="#lrj5p#7n%zHFb$z9I~%">
+        <statement name="utterance">
+          <block type="utt_text" id="H@DfO_r7mg)jcycb.+eF">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="m:4vvXlC+wjB;(1?(BZ!">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="qUx76*5Yn7f(s6_-4Qms">
+                <statement name="utterance">
+                  <block type="utt_text" id="|MJ?yITaUI17ViYumXLx">
+                    <field name="text">spreek</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="/@|1,uKD(|4#$0,y=Amd">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="kKc_ubvT`}+vXS7+i-YM">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="@c4BO#~0D^pVzb[iu0P(">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="/fqk%ZElX]P7b*lRwC}7">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="ask_utterance" id="l63Yp|i1jseEJ{_5aLA.">
+                            <statement name="utterance">
+                              <block type="utt_text" id="M6xXPu4w8`#ebCEjD6s7">
+                                <field name="text">mean in English?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="{/-5uzy.L/oEzCoQ*Q(?">
+        <field name="responseText">speak</field>
+        <statement name="actions">
+          <block type="say_utterance" id="!5O{+NrN^uZKQC!y9P7D">
+            <statement name="utterance">
+              <block type="utt_text" id="~/kC$U7J+jZ]@8skt)Oj">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="B9t,@2V{N[=o::aVxZ,7">
+                <field name="stateName">fwords3</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="ELNOKH#Z:a=_4{~h@lDI">
+            <statement name="actions">
+              <block type="say_utterance" id="qlN6+*%6~%djw2esGd6V">
+                <statement name="utterance">
+                  <block type="utt_text" id="c}v2cK}rZwR1Z#eH0.}8">
+                    <field name="text">That is not correct. It means 'speak'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="A|6]IRa_=T$USM9VJl=R">
+                    <field name="stateName">fwords32</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="!(Z8Rx`?GpkSCTc;gV;E" x="-4206" y="-95">
+    <field name="stateName">ssentence</field>
+    <statement name="actions">
+      <block type="say_utterance" id="]#[KM~QKbU7;n!VTK%sO">
+        <statement name="utterance">
+          <block type="utt_text" id="ycYHAi2%m66VCyEmuaGL">
+            <field name="text">Now we learned some words, we can use them in sentences. Translate the meaning of this sentence:</field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="(i2`Dn8yXV{-OmeGwvtS">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="RBK0E1UUJj=F:-a{*HK^">
+                <statement name="utterance">
+                  <block type="utt_text" id="-M09Y=#6!LL~Es3~l|Yw">
+                    <field name="text">'Ik ben student.'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="PqBFP[NC6-E9c@pO]_0{">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="listen" id="cIo}1`YTtG4$0;C|!8Ph"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="Z^s(j*5vS*x!3C2z3(C-">
+        <field name="responseText">I am student</field>
+        <statement name="actions">
+          <block type="say_utterance" id="WmEa_#V):$)E$v}l(t*K">
+            <statement name="utterance">
+              <block type="utt_text" id="p.eiGvR5C*e|3m7X9KGE">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="Zl0Un,NNMNxK^F77EnXa">
+                <field name="stateName">ssentence2</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="Xd_q:w-if|FjVO?O!+mf">
+            <value name="intent">
+              <block type="intent_variable" id="C2NnH#OX!qEL(zxedgC?">
+                <field name="varname" id="0Lb=1CEQ.TO0@,oF6.w#" variabletype="IntentCandidate">sentence</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="nf#;YqM1fPN|E)|/:pTL">
+                <statement name="utterance">
+                  <block type="utt_text" id="m{wF=(^1NO}y|nvarXqc">
+                    <field name="text">That is partially correct. It means 'I am student'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="FTiGNI3GkkY0f|CnJWIC">
+                    <field name="stateName">ssentence2</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id=":x-@UP$e`TM]5#E,^TFD">
+                <statement name="actions">
+                  <block type="say_utterance" id="8DKLx]T{a1mm]+74aGdq">
+                    <statement name="utterance">
+                      <block type="utt_text" id="M1x(3C7D*u{9$,26#~zr">
+                        <field name="text">That is not correct. It means 'I am student'</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="|5i-|HzgMLG`b^JDc1D|">
+                        <field name="stateName">ssentence2</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="k!2-ke+Y}EpVqzbK#UA}" x="137" y="-204">
+    <field name="stateName">fsentence</field>
+    <statement name="actions">
+      <block type="say_utterance" id="41HSxb11x:UL$b+hv8n7">
+        <statement name="utterance">
+          <block type="utt_text" id="XvWRn$M~]7ZhwObFfJeS">
+            <field name="text">Now we learned some words, we can use them in sentences. Translate the meaning of this sentence:</field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="FF=_}f{*3RLfSV4i)kN2">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="|:hzOVUkPsHs_z5_3-lu">
+                <statement name="utterance">
+                  <block type="utt_text" id="^8P6gAdOyiOdQsU+$wO@">
+                    <field name="text">'Ik heet'</field>
+                    <next>
+                      <block type="utt_value" id="B^|/)VrjK!W?wwR{/Obu">
+                        <value name="value">
+                          <block type="variable_get" id="65YXD[k4MNF^t%{.KG-E">
+                            <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="c3o3O]9b/]b|U+b|$b6i">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="_Whmp+bjxYf.j0iDm|H6">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="]1Se+(+=z)zQmcAw+*1!">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="6Xic[/V#j!E$FQhAtA!I">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="listen" id=":B!FU+3}/7Wc{`SoM4mv"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="}[=+h;0tV(|a;fwBQ}vN">
+        <field name="responseText">my name is </field>
+        <statement name="actions">
+          <block type="say_utterance" id="8lkMNTMQcwk;|+NKQ[}y">
+            <statement name="utterance">
+              <block type="utt_text" id="WgTRpXy6)Pg0UK(tNc~W">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="cC]LNv1Pt/J?67N,8N]`">
+                <field name="stateName">fsentence2</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="%Rq^s3ds%|uqE8=7;wJ!">
+            <value name="intent">
+              <block type="intent_variable" id="JVGe#qf;(4Gj=sDLUx/_">
+                <field name="varname" id="D8,4!7)HyhQCF8l~nUOX" variabletype="IntentCandidate">fsenten</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="km_4FMH5nNIaN.zweFxu">
+                <statement name="utterance">
+                  <block type="utt_text" id="e+,sN_26+^OjhI%#^[w(">
+                    <field name="text">That is partially correct. Well done! It means 'my name is:'</field>
+                    <next>
+                      <block type="utt_value" id="|%rKjr~qd?NqzmGl8p{D">
+                        <value name="value">
+                          <block type="variable_get" id="@Kat!4rd4,K1Dvn@-H%s">
+                            <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="Cx210Y-#;-#;lMA.ExpB">
+                    <field name="stateName">fsentence2</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="Vx,XG!MXQR@JBR6v#AmG">
+                <statement name="actions">
+                  <block type="say_utterance" id="{KAd+_^J|L5!R`g#.=v.">
+                    <statement name="utterance">
+                      <block type="utt_text" id="nXB9lt=oe8/0(cof6#tO">
+                        <field name="text">Sorry, not correct. It means 'My name is:'</field>
+                        <next>
+                          <block type="utt_value" id="i7_n?iI1#i3)0CLc+Njq">
+                            <value name="value">
+                              <block type="variable_get" id=")KR!8DB.iMFR2+(LHM{u">
+                                <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="^%~h-#~z/L@f%-c]c{zg">
+                        <field name="stateName">fsentence2</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="KgnTRDtTZ_K!w,1LIrQ|" x="-5443" y="165">
+    <field name="stateName">swords32</field>
+    <statement name="actions">
+      <block type="say_utterance" id="p@BVRuG4~_WhE+YMiyk8">
+        <statement name="utterance">
+          <block type="utt_text" id="WPp]n1rAY0DE(+30kG,w">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="57atG^bxh8N_zoR!cv#k">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="~ypuM4[qKN#vcoeK$GP3">
+                <statement name="utterance">
+                  <block type="utt_text" id="d=R|sOa+hkHCcaDN}tYy">
+                    <field name="text">doei</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="San?L:vwK5d;n^Md(!gA">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="uhoVpxd0vXzm+=81bfuy">
+                        <statement name="utterance">
+                          <block type="utt_text" id="S)Xke?uw71|y2$~yqOo]">
+                            <field name="text">mean?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="S*6;(0.3a(;%R@]h6Qz~">
+        <field name="responseText">bye</field>
+        <statement name="actions">
+          <block type="say_utterance" id="+nXY;|AyMx!BwsJ}R_cU">
+            <statement name="utterance">
+              <block type="utt_text" id="4=gglLlE%?zG2vwZTP9#">
+                <field name="text">That's also correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="@m?Dm]IvQ7RS4K6wwv-5">
+                <field name="stateName">swords42</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="jp`hEJQsn78;*//8`~N9">
+            <statement name="actions">
+              <block type="say_utterance" id="niC1mv!1~vElv%8s-ABR">
+                <statement name="utterance">
+                  <block type="utt_text" id="Ut(6B=0KV@J*Bg/SZF*/">
+                    <field name="text">That is not correct. It means 'bye'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="Wqm#|_hp7w%+k-w|~rlv">
+                    <field name="stateName">swords42</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="``f$GW.4rs~zxG@OfWP|" x="2299" y="-213">
+    <field name="stateName">fsentence12</field>
+    <statement name="actions">
+      <block type="say_utterance" id="$HJ~{5__]`{/CAMmPu!f">
+        <statement name="utterance">
+          <block type="utt_text" id="F;6pxeaM`~Xn?V0C[=eY">
+            <field name="text">Wheew that was rough. You know the drill</field>
+            <next>
+              <block type="utt_value" id="].D#EBX8_uhIHBFn#mE~">
+                <value name="value">
+                  <block type="variable_get" id="pNRw#KG+Ev10TUnGrAcw">
+                    <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="utt_text" id="Kw/=xD4H5IO8Cg+c4:Gm">
+                    <field name="text">Try to translate the meaning of this sentence:</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="4k(fxQ[+]o-JjOKY)y#F">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="-ksQKoP@Fd3KP|K$c6[H">
+                <statement name="utterance">
+                  <block type="utt_text" id="}Zn;JGFD@|Api*k0Yynn">
+                    <field name="text">'Spreek je nederlands?'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="{bJ^-={dTVTi2xsD%WvW">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="@r|h,I6,azQndedcBA5k">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="tP=p2Gqi82h#{WO^e-5Y">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id=".~_!52,$cQbTe-bSSuAA">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="listen" id="/hw5;xHmMci^H3W9|XlR"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="KJXNy7ThZ,kR;3MCZ)*4">
+        <field name="responseText">Do you speak Dutch</field>
+        <statement name="actions">
+          <block type="say_utterance" id="J6l^%WZ;yPjv5fG.S-YJ">
+            <statement name="utterance">
+              <block type="utt_text" id="S`p^Ct:F(L*[g*DBCzyM">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="@RE}E%Qf]cCrOi))xD+G">
+                <field name="stateName">fsentence22</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="jYcY4xnlf$t*lueZL4U|">
+            <value name="intent">
+              <block type="intent_variable" id="zkk/Vxu,UC$My%ujQ41A">
+                <field name="varname" id="vK8zn?`0PAJ~AfOP,n!?" variabletype="IntentCandidate">fsentenc12</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="?sdn*f|n6S+,ZVUDi]DQ">
+                <statement name="utterance">
+                  <block type="utt_text" id="XG*V*5thLWyUhK{ybaD3">
+                    <field name="text">Great! That is partially correct. It means 'Do you speak Dutch?'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="mvP5o2WXhId9E{60I0L,">
+                    <field name="stateName">fsentence22</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="zQzP39[SG@aX;C-P:ek8">
+                <statement name="actions">
+                  <block type="say_utterance" id="LjX7zUag{J67.{dN,u4F">
+                    <statement name="utterance">
+                      <block type="utt_text" id="2qwI6_r![2gFG]C1I~Hc">
+                        <field name="text">That is not correct. It means 'Do you speak Dutch?'</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="mW)(2{S0j%09h%Z$|R}M">
+                        <field name="stateName">fsentence22</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="C!j,2$[G-Jw2`|i7%BO]" x="-3494" y="123">
+    <field name="stateName">swords3</field>
+    <statement name="actions">
+      <block type="say_utterance" id="*]/{_2tt!n(:=ZY7!0VH">
+        <statement name="utterance">
+          <block type="utt_text" id="{Bda-o0w[o[j-LEc3G-o">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="y9vpcw:fIL~|,=;ZpdrK">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="gn2TNNWNM0}-rFt{#vw-">
+                <statement name="utterance">
+                  <block type="utt_text" id="iAGzqNv:X[C2cNn^+ybl">
+                    <field name="text">Ik ben</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="KeFfb(%!4hZ@#)]`_30o">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="Idscf$zHyo@n[(+E#,(B">
+                        <statement name="utterance">
+                          <block type="utt_text" id="Y-Pspd|txBWxq?Y0Jm~z">
+                            <field name="text">mean?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="uryKLh4+a3I,LxiP%==w">
+        <field name="responseText">I am</field>
+        <statement name="actions">
+          <block type="say_utterance" id="Y!?a;4)=e|ljQPC@h{(M">
+            <statement name="utterance">
+              <block type="utt_text" id="CNoM]9iyf#qx^K{5eOBO">
+                <field name="text">That's also correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="OH~?z{,Oo_+:M#bf}D)l">
+                <field name="stateName">swords4</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="aZqP.@-o1[vlng,|kc}z">
+            <statement name="actions">
+              <block type="say_utterance" id="h-?6#/TW{^X7sCr+GpY$">
+                <statement name="utterance">
+                  <block type="utt_text" id="=Zm,AR_jB(NmuO1c@^KD">
+                    <field name="text">That is not correct. It means 'I am'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="r3os4-w+;-Hjg4}d:g$P">
+                    <field name="stateName">swords4</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="[|UOmHiV+mWs_VxF!U`9" x="-6605" y="366">
+    <field name="stateName">send</field>
+    <statement name="actions">
+      <block type="say_utterance" id="}3$;d_(Av]0nbJ}d`q,`">
+        <statement name="utterance">
+          <block type="utt_text" id="%+muAv(]R%zK/@J~[Gyu">
+            <field name="text"> You have learned 8 words and  6 phrases under 5 minutes! If you need any help, reach out to me. Good bye</field>
+          </block>
+        </statement>
+        <next>
+          <block type="terminate" id="]k9Q0s$]]kXPG]X,UuE("></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id="9jtT!}u-n{%I)7K5}sJP" x="-597" y="61">
+    <field name="stateName">fwords3</field>
+    <statement name="actions">
+      <block type="say_utterance" id="AbEqA{*Sz0?WX_B5@^dz">
+        <statement name="utterance">
+          <block type="utt_text" id="W;Wh?a0h?fAt2N}B}dxm">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="o`)+1+jK[Ud*sD}%]3vL">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="An3HVaTNxm02t,tqhNRP">
+                <statement name="utterance">
+                  <block type="utt_text" id="z_;fX9_^ZSzI}L$]QSrw">
+                    <field name="text">'Ik heet'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="n8}YiJ$rhdZXWD~BoQ`D">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="$W,[rkfep@iUyXn%QAlI">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="Xq#^#;FIFUd;`kH2FUY5">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="!nV8xMS2P~LA@B~TsrsF">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="ask_utterance" id="bCYYcaPfp|BV,(E|$kz9">
+                            <statement name="utterance">
+                              <block type="utt_text" id="Pl(,w~|SE[.w;z8B-T.q">
+                                <field name="text">mean?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="~]O;*m4:kMtekQQWFPB@">
+        <field name="responseText">my name is</field>
+        <statement name="actions">
+          <block type="say_utterance" id="knwe2-:Y7XBjM_AE%#)X">
+            <statement name="utterance">
+              <block type="utt_value" id="[I{F%G76Jq^ftCLeKAYX">
+                <value name="value">
+                  <block type="variable_get" id="kdEo9)AQB+ot[wGbowr$">
+                    <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="utt_text" id="V]l3{U;ph_||DeaA-8m9">
+                    <field name="text">That's also correct! You are doing well!</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="n+80F/{x4q:kG1LZuaKt">
+                <field name="stateName">fwords4</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="@sPF0I6/sb@AX`gLgY.h">
+            <statement name="actions">
+              <block type="say_utterance" id="sz;*r:-r(uV@DX.1JL:I">
+                <statement name="utterance">
+                  <block type="utt_text" id="DFKJff*oUCRi%*;C$t-1">
+                    <field name="text">That is not correct. It means 'my name is'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="F|RDRur@=#)-/^aq1W?7">
+                    <field name="stateName">fwords4</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="(;}r~HP)PY5#7=Q{YxlD" x="1498" y="6">
+    <field name="stateName">fwords32</field>
+    <statement name="actions">
+      <block type="say_utterance" id="c,m/u#YUj?I,!4wR8!Jg">
+        <statement name="utterance">
+          <block type="utt_value" id="1D{Yzr`QU#Lvm2?UP6bA">
+            <value name="value">
+              <block type="variable_get" id="0=0{l7l)I@n7N8m!7QTV">
+                <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+              </block>
+            </value>
+            <next>
+              <block type="utt_text" id="rwiOWMPUv%BjM(D8(xrd">
+                <field name="text">What does </field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="9y*qYryphuYiq@Z?v],T">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id=";`}j#u{o?bagk.{fUJdc">
+                <statement name="utterance">
+                  <block type="utt_text" id="r{hg2Y#bnmx?=k]js*Lb">
+                    <field name="text">'nederlands'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id=":iy)jv*EI*!%2uTjvIb5">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="P0sx_Nh5+gK:U3{t3%-b">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="J^;OPpH(;}{AaIQ5w{XS">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="^^w[#2D}8$v4o8PU%8_D">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="ask_utterance" id="Dwrt*a|-O+brjSeYze{m">
+                            <statement name="utterance">
+                              <block type="utt_text" id="~1?^6;7AB[Bye||traMy">
+                                <field name="text">mean?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id=";NmHSxHW]eVbO@r?[p2i">
+        <field name="responseText">dutch</field>
+        <statement name="actions">
+          <block type="say_utterance" id="$VLJU6COsNnyz2I]~PrP">
+            <statement name="utterance">
+              <block type="utt_text" id="Ww8g^kYg-S~gritF?_6g">
+                <field name="text">That's also correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="k+dloRG2,CrmJjNne+W|">
+                <field name="stateName">fwords42</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="LmhPfN9N=mBi5XtD]~/d">
+            <statement name="actions">
+              <block type="say_utterance" id=";Jg_3s){h5`9?hT-cXo4">
+                <statement name="utterance">
+                  <block type="utt_text" id="3c5jfU}2a+0B1[`78RQ%">
+                    <field name="text">That is not correct. It means the language 'Dutch'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="+gsN=dLJ|R(fnv-)eU;P">
+                    <field name="stateName">fwords42</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="define_intent" id="YW}NNJ=Pf`LEW)*X3MD5" x="-6107" y="526">
+    <field name="intent_name" id="!OyH9x`.Gq3KUvP;cXd8" variabletype="IntentCandidate">ssenten12</field>
+    <value name="intent">
+      <block type="intent_simple" id="%BQ-4^K_7lY71;-z??@j">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="z)X_n*x|/q7J58I9E+E*">
+            <field name="text">how</field>
+            <next>
+              <block type="intent_example" id="/PZI;o9Q]Ad{Y8/MTl~$">
+                <field name="text">you</field>
+                <next>
+                  <block type="intent_example" id="n:G5+RQ%%q+]~AY=]i4S">
+                    <field name="text">not</field>
+                    <next>
+                      <block type="intent_example" id="*.:qG1Adiz7DvEzYtV-u">
+                        <field name="text">so</field>
+                        <next>
+                          <block type="intent_example" id="W]0Jgk%PhWfuwa.?N.;N">
+                            <field name="text">good</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+  <block type="define_intent" id="~idKkQQL|zS6Dd]h*Fos" x="-4198" y="523">
+    <field name="intent_name" id="0Lb=1CEQ.TO0@,oF6.w#" variabletype="IntentCandidate">sentence</field>
+    <value name="intent">
+      <block type="intent_simple" id="~eKU_]dz+5G6#|?4GV4{">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="~*bBdjQ1(CV`Wi?$HUpr">
+            <field name="text">am</field>
+            <next>
+              <block type="intent_example" id="H#vU*?Kqf(k*N1YG$G.:">
+                <field name="text">student</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+  <block type="state" id="wuG.^iL`$k_zo/56vj7f" x="-5440" y="701">
+    <field name="stateName">swords42</field>
+    <statement name="actions">
+      <block type="say_utterance" id="y^u4.^_{O%tH:F(Lvc%L">
+        <statement name="utterance">
+          <block type="utt_text" id="]GBYZ]n~mi=rIbQM92k6">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="MDygQGE=dYC(%0NnWso*">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="K61K=z_UmCP=/c?7+lj=">
+                <statement name="utterance">
+                  <block type="utt_text" id="^zpU-pgi0H0G~R:|2YM!">
+                    <field name="text">Hoe gaat het?</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="g3iIh:#+!|Q2/%lnDJ-f">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="qGMUb]SiwNfgFG+/rlH[">
+                        <statement name="utterance">
+                          <block type="utt_text" id="gO~2BSB)T:4oM~kV+ocW">
+                            <field name="text">mean?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="Nv?-F8PtdlXh4kp[cwWm">
+        <field name="responseText">how is it going</field>
+        <statement name="actions">
+          <block type="say_utterance" id="BOkHEG(@DGL#g!Vlf_OF">
+            <statement name="utterance">
+              <block type="utt_text" id="rih%v|;wW)};{jh+Co!p">
+                <field name="text">That's correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="sioeMKNImTH#cj?jLxb;">
+                <field name="stateName">swords52</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="hkUKr3LhgpZ/Phk@fn_=">
+            <statement name="actions">
+              <block type="say_utterance" id="7~SQb4=o%E?oZ$uR(%o;">
+                <statement name="utterance">
+                  <block type="utt_text" id="H1[5*PpbqM+=7Lu%u7wu">
+                    <field name="text">That is not correct. It means 'how is it going?'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="KK/!*}qW9:!lW@,KnN+$">
+                    <field name="stateName">swords52</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="k#^%ex#0(%TsxSf0u-DC" x="-6097" y="750">
+    <field name="stateName">ssentence22</field>
+    <statement name="actions">
+      <block type="say_utterance" id="aO|8^kfTu:PkRhGdBQ79">
+        <statement name="utterance">
+          <block type="utt_text" id="6/04QNMa06F{VU+4)p7+">
+            <field name="text">Here is the next sentence:</field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="N=,!TBnN3.~o?lDw;?85">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="DlZz4)@H{JW?W|2UL![B">
+                <statement name="utterance">
+                  <block type="utt_text" id="Z0Bm~O]uq3jc,J+W:y?)">
+                    <field name="text">'dank je well, doei!'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="|.10~5q8R{eyV@e`4);X">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="listen" id="|b}YWse#zK)DZ#wD{m3-"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="Z!0^i#TF,^Oi)YR;jxd(">
+        <field name="responseText">Thank you bye</field>
+        <statement name="actions">
+          <block type="say_utterance" id="dD1GF1T[`C~hoVYv[J_4">
+            <statement name="utterance">
+              <block type="utt_text" id="-k^4Tn_b?ES#yP+!bd:y">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="_rY;vDS^@:yNqhA;ee`(">
+                <field name="stateName">send</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id=":GLDZ;qH94,-Y@1X(G%6">
+            <value name="intent">
+              <block type="intent_variable" id="5Cxs]ZRHJb~-Agj`hK${">
+                <field name="varname" id="6pLB34B7rvD#lP:@(:I2" variabletype="IntentCandidate">ssenten22</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="oM*5A%{g#C`Mhqf.STlU">
+                <statement name="utterance">
+                  <block type="utt_text" id="p-`o^|-MhH=W(r_b]#9a">
+                    <field name="text">That is partially correct. It means 'Thank you, bye''</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="v{T}}EzRis;K{0).Aqq,">
+                    <field name="stateName">send</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="tQFaciC00=ZtN7wu9h#6">
+                <statement name="actions">
+                  <block type="say_utterance" id="2IOP!:Mozp2odN:%POtX">
+                    <statement name="utterance">
+                      <block type="utt_text" id="}i,NO*nb6/#M#uPiYfmN">
+                        <field name="text">That is not correct. It means 'Thank you, bye!'</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="D-b/zgr3TX=MO#Dbb??|">
+                        <field name="stateName">send</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="-KC(MH{xT`YG8$}kXFj^" x="-3494" y="655">
+    <field name="stateName">swords4</field>
+    <statement name="actions">
+      <block type="say_utterance" id="mG9F_B,d~t/*6pRd5(lX">
+        <statement name="utterance">
+          <block type="utt_text" id="0m9CkzNSoMN5Xu(C!7Fc">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="}pUbo:((^tRfn-)DWw1Q">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="S$#$+kS3[nAG|1/1g*4N">
+                <statement name="utterance">
+                  <block type="utt_text" id="#.aa4*gfzDavWq2vFO#h">
+                    <field name="text">gezellig</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="3)/n2yos:~g#vrUDbF}:">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="WycXG/S`:uN+f=*sqv~v">
+                        <statement name="utterance">
+                          <block type="utt_text" id="]7Jv[BZv%GTckXc*I~(W">
+                            <field name="text">mean?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="KYqUR0sMdUWz%FF*v]jN">
+        <field name="responseText">nice</field>
+        <statement name="actions">
+          <block type="say_utterance" id="#tE2s1WGK-`$yTi]ET/B">
+            <statement name="utterance">
+              <block type="utt_text" id="L$ULuC]|ui4cdM,%J+K5">
+                <field name="text">That's correct!</field>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="jHuUus#_(5Iwca)6,~8_">
+            <statement name="actions">
+              <block type="say_utterance" id="-APhY)C|jUFV*wh[0~X=">
+                <statement name="utterance">
+                  <block type="utt_text" id="?%@=)3Y.]IAZk-BRl:3~">
+                    <field name="text">That is not correct. It means 'nice'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="S}jwJcCR,ImWP4n;5,)N">
+                    <field name="stateName">swords5</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="l.)*{phr_%4T:BX8w$Ec" x="-4188" y="697">
+    <field name="stateName">ssentence2</field>
+    <statement name="actions">
+      <block type="say_utterance" id=".jKWit;zu=w]#;%sQn0U">
+        <statement name="utterance">
+          <block type="utt_text" id=";5,B]q)s!3]Nco!7$Py(">
+            <field name="text">Here is the next one: </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id=".a*r9_A.k|_we.J3Etfk">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="GaymQBnn+844mAt*f3!@">
+                <statement name="utterance">
+                  <block type="utt_text" id="{@=T]Vk8UL9j_/qjQ|~X">
+                    <field name="text">'gezellig klas'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id=";Or4QE*F:t,^p}}rYA37">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="listen" id="pPk,C5a;:z9hLC)SD38w"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="YK`gImD6;SV;+JL98z3z">
+        <field name="responseText">nice class</field>
+        <statement name="actions">
+          <block type="say_utterance" id=".O3i[a[f?,eA,%K[$,4b">
+            <statement name="utterance">
+              <block type="utt_text" id="pN8(?tQEU$-FpP%9IKiM">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="VO[(BJ+UQK0MKhx!b-zP">
+                <field name="stateName">swords12</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="wv[;In/yx_,PubgOs`C*">
+            <value name="intent">
+              <block type="intent_variable" id="Es/|`__Wohp@{~GVz^0_">
+                <field name="varname" id="v0?s;vjQkrJlmP-gcmff" variabletype="IntentCandidate">sentence2</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="NZ!Oh=@s1U/HVp(|4Sdf">
+                <statement name="utterance">
+                  <block type="utt_text" id="{LTmBLMF8u;zSFJol_i@">
+                    <field name="text">That is partially correct. It means 'nice class'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="MQn2S7:L;,CZ;Y;t]DuA">
+                    <field name="stateName">swords12</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="_-EdtjRvzZFNl939%k=$">
+                <statement name="actions">
+                  <block type="say_utterance" id=";rZGqy14|@~;i8d{PuVK">
+                    <statement name="utterance">
+                      <block type="utt_text" id="G2N1DKGFPn4:g39SCD4o">
+                        <field name="text">That is not correct. It means 'nice class'</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="e%hz*icQE4e+-Y{U[sv`">
+                        <field name="stateName">swords12</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="define_intent" id="D}j72poYIaZ|_gLsu}hO" x="148" y="515">
+    <field name="intent_name" id="D8,4!7)HyhQCF8l~nUOX" variabletype="IntentCandidate">fsenten</field>
+    <value name="intent">
+      <block type="intent_simple" id="nAmk;k25w8.Z:t?I7O5H">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="MT!Zq43RuwIP84F/WY|#">
+            <field name="text">my</field>
+            <next>
+              <block type="intent_example" id=":Kem6RWxLnQ6#2KcI|=;">
+                <field name="text">name</field>
+                <next>
+                  <block type="intent_example" id="#EtqBoux5}l0]~reFjUx">
+                    <field name="text">is</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+  <block type="define_intent" id=":ll/.Xp+SOZI1qi1`XzB" x="2306" y="491">
+    <field name="intent_name" id="vK8zn?`0PAJ~AfOP,n!?" variabletype="IntentCandidate">fsentenc12</field>
+    <value name="intent">
+      <block type="intent_simple" id="hJZDU06Gn=@z9/+4tmTD">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="N.6bqit{m18B=_M/4`^p">
+            <field name="text">you</field>
+            <next>
+              <block type="intent_example" id="Wm%4PW($p@@hJ6M0rYXX">
+                <field name="text">speak</field>
+                <next>
+                  <block type="intent_example" id=",@R5%cQFlYQkXqqlFLXG">
+                    <field name="text">Dutch</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+  <block type="state" id="8ey`T*eKv[cd^kKMgXR:" x="-588" y="650">
+    <field name="stateName">fwords4</field>
+    <statement name="actions">
+      <block type="say_utterance" id="j`W1t|!8{4s`=P{z*T|c">
+        <statement name="utterance">
+          <block type="utt_text" id="$JTC$Ppfd9a)X}-u3S0i">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="j[h^L%?8S4v4$iA?Ovhv">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="}52.!GSWFxjY*)2qNLZ@">
+                <statement name="utterance">
+                  <block type="utt_text" id="%3?|(qVr|ONWjmMU;/xE">
+                    <field name="text">goed</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="CN{U$0heC#b^AeWEg:u%">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="%Jct4@n_=#odQxuzo6G%">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="o%s,JUfz9!p3DunaVRm2">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="NoeVA9d6}4jp-652Ov3(">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="ask_utterance" id="CtanFF]`^f8*y2ARA9u|">
+                            <statement name="utterance">
+                              <block type="utt_text" id="-t}vey}I7M)`tsz+`;fb">
+                                <field name="text">mean?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="VKoZShEfl_)~nM:,rLMD">
+        <field name="responseText">good</field>
+        <statement name="actions">
+          <block type="say_utterance" id="yNWmYXC*Y6`)[P=Uf,%:">
+            <statement name="utterance">
+              <block type="utt_text" id="@|!A`Y:pW9zh*.Y3#4YT">
+                <field name="text">Perfect, it's correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="9TOQSxoJvLCZyqJp#~sl">
+                <field name="stateName">fwords5</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="%/xu1v`=#8)k.2?bpV]K">
+            <statement name="actions">
+              <block type="say_utterance" id="3jZYny9T7U+(?d!!-C|R">
+                <statement name="utterance">
+                  <block type="utt_text" id="@eUf8mL/szNQ{*rNu[L)">
+                    <field name="text">Sorry,that is not correct. It means 'good'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="LIZ{H:%Fv9FH^V)XZF=z">
+                    <field name="stateName">fwords5</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="(FmxR|n~i5C|l]1rD55^" x="1508" y="592">
+    <field name="stateName">fwords42</field>
+    <statement name="actions">
+      <block type="say_utterance" id="k=YlCOYr3SSlqhIRE2hR">
+        <statement name="utterance">
+          <block type="utt_text" id=":]L(U95o@%bTdv;L/i%H">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="*3E4-{bl5,xMt0,yG4@$">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="-]#d5*l)0GV0cJI?V;{E">
+                <statement name="utterance">
+                  <block type="utt_text" id="FnH|yc?2`G4H(J3pD:sC">
+                    <field name="text">je</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="9+9;v(Zt|(mHS*wJ-2Ug">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="$j/y@]r!)H|:N[OY3@p}">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="`jl;|t+?%~R%L(3qpNja">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="xBV59(f0D(WwGs[Y2q3e">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="ask_utterance" id="Hw6-0j9QQQ0RWDeK,b_!">
+                            <statement name="utterance">
+                              <block type="utt_text" id="P7;g(kY8^[TAiDT~23.:">
+                                <field name="text">mean?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="#4Fz.lGn},bGvZD?LkXb">
+        <field name="responseText">you</field>
+        <statement name="actions">
+          <block type="say_utterance" id="I3Wm;ZU/R!$+3pxc8)Lr">
+            <statement name="utterance">
+              <block type="utt_text" id="f~XFXeJPhu;q0^4)9}@f">
+                <field name="text">That's correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="8QoAC(![5t/wRkT95n(?">
+                <field name="stateName">fwords52</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="_aA:tk8I@~;U%Qqq6Zg9">
+            <statement name="actions">
+              <block type="say_utterance" id="x7EJu:A4||tLfJdcjjg+">
+                <statement name="utterance">
+                  <block type="utt_text" id="3dAy8-~Va9~L#$?tOd6n">
+                    <field name="text">I am afraid that's not correct. It means 'you'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="zjKcx,w*eFE*MG+E`}CH">
+                    <field name="stateName">fwords52</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="E%P6,a@ttp{`fm`;?.Mn" x="151" y="689">
+    <field name="stateName">fsentence2</field>
+    <statement name="actions">
+      <block type="say_utterance" id="6$t^uD8NMwoX#`_+dl/^">
+        <statement name="utterance">
+          <block type="utt_text" id="yTV!rQK=1F_xiowxfL=d">
+            <field name="text">Here is the next one: </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id=".,:.RMh)uye$[0Qy9:]]">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="@O9irYf@fPx:bp;|%EbO">
+                <statement name="utterance">
+                  <block type="utt_text" id="iaJ6%Pv/^q[H)!/X%U:7">
+                    <field name="text">fijne dag!</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="9ijkwDX74y7iz4:|FzQP">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="HfY4pZ?VAtKUkBST)cdA">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="B_iJO[H;@N9|y#Q^1e#d">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="S0s27r0KNJS]Y5*1EN`3">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="listen" id="e#oLwzsDy$@jVHxb01,e"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="#rtcXpg|4rnXko0Cxa;w">
+        <field name="responseText">Have a nice day</field>
+        <statement name="actions">
+          <block type="say_utterance" id="%J(5syyW+.D9VsC#i:9d">
+            <statement name="utterance">
+              <block type="utt_value" id="vHl*xQQ?#}ay?Vso=4y_">
+                <value name="value">
+                  <block type="variable_get" id="H.o%2v@}y$|S,r%[S(h?">
+                    <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="utt_text" id="Ne`~#(c`5]FfjeZWWt}S">
+                    <field name="text">That is correct! You have a nice day too! Haha</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="$X+?h{e$*tMHO`p*NU_b">
+                <field name="stateName">friendly2</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="yZQI6dC6*SpoYnv;H#fE">
+            <value name="intent">
+              <block type="intent_variable" id="16!}ZdUT!,4?-gPC[Uk.">
+                <field name="varname" id="mA42/A)VqjU5FtWo(D)3" variabletype="IntentCandidate">fsenten2</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id=",No/7v^pxwLoKTjVYc54">
+                <statement name="utterance">
+                  <block type="utt_text" id="N.y9^D`m`ig0Y(T5G[CV">
+                    <field name="text">That is partially correct. It means 'have a nice day!'</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="JA}LMx=,[G9KrFM}aO!b">
+                    <field name="stateName">friendly2</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="Aelmoh#_DHDD:}mu2]L{">
+                <statement name="actions">
+                  <block type="say_utterance" id="g?T=-{$=5d;rmZj8Ghzk">
+                    <statement name="utterance">
+                      <block type="utt_text" id="q^$pH@7@~cIMtnkP/Vp4">
+                        <field name="text">That is not correct. It means 'Have a nice day!'.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="al_f6#B!(0{7*1C0Thw4">
+                        <field name="stateName">friendly2</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id=".h8VvJ4G46S7*]Ibb$_]" x="2850" y="603">
+    <field name="stateName">fend</field>
+    <statement name="actions">
+      <block type="action_gesture_param" id="/N,1t]l,[[)IzkN?%5IZ">
+        <field name="gesture">BigSmile</field>
+        <value name="strength">
+          <shadow type="text" id="4{CH[n$5jD!iWlhqpeN%">
+            <field name="value">1.0</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="text" id="`Gjuu?rV[6@ZozOht)Iv">
+            <field name="value">5.0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="say_utterance" id="jUm9^ifj!:ZP~{n#v.$}">
+            <statement name="utterance">
+              <block type="utt_value" id="7.dy_,.P/i[6S,K49jg5">
+                <value name="value">
+                  <block type="variable_get" id="+Byeaz8_#iS#1@YV^VF4">
+                    <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="utt_text" id="R.?6(5V{gl_cVFLGz+Sj">
+                    <field name="text">Congratulations! You have taken your first step in learning Dutch. You have learned 8 words and 6 phrases under 5 minutes! Isn't that wonderful?</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="action_wait" id="2;U{w5Z_A}JLHm)peyLE">
+                <field name="delay">1000</field>
+                <next>
+                  <block type="say_utterance" id="c/bHoEdSZjw:ryU$uY83">
+                    <statement name="utterance">
+                      <block type="utt_value" id="/pNFI(H|?RqO]S)UtV.I">
+                        <value name="value">
+                          <block type="variable_get" id="v=Om]3OsLMtLX:Hj||7R">
+                            <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="utt_text" id="1.p[?9U`5_=?Tn^6Jy(a">
+                            <field name="text">I hope you enjoyed the ride. If you you ever need assistance learning Dutch, don't hesitate to reach me! I hope you a nice day</field>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="action_gesture_param" id="G,tQV4g]MEfaD;5vXk=1">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="k5m-n)~NiEtWiY.Z(QeJ">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id=",PM]|BzlFb9dc{{vuO;x">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="terminate" id="E6e$F,|rJxIHOCm|1B?g"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id="P9Pn0WWJ,v-Nct;;7]*s" x="2306" y="664">
+    <field name="stateName">fsentence22</field>
+    <statement name="actions">
+      <block type="say_utterance" id="K}!(Em(5zK{p6cE2ma}F">
+        <statement name="utterance">
+          <block type="utt_text" id="X@@hs)+)P*5^sSUP80%o">
+            <field name="text">Here is the next one: </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="VUI1,~.SQ4Z#T)wH3-ga">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="|{FhB,*[;UlRf7y+L~g4">
+                <statement name="utterance">
+                  <block type="utt_text" id=".XZ/^9{wW.*zx^fdIwU0">
+                    <field name="text">goedemorgen</field>
+                    <next>
+                      <block type="utt_value" id="{_L%Hm7H16zpkJE@U@M!">
+                        <value name="value">
+                          <block type="variable_get" id="~vZ3,-C,2*fMR(hFK,sY">
+                            <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="@2DVBqcHy|8L+-p,4Jnb">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id=")?9shazyaQpVAdvc7U-,">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="y,9TZxe4n]L2ZS0l*bP`">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="[hXwV8Z{]P.pl]HNBrZw">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="listen" id="lRLX#R]PP@4xXq.eb+t/"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="9o=B6s|+MdaNKV+xZLX=">
+        <field name="responseText">good morning</field>
+        <statement name="actions">
+          <block type="say_utterance" id="v{KzrIpPL{xOPk_kA#G;">
+            <statement name="utterance">
+              <block type="utt_text" id="[_i.T*Xcp7srgddt$GjC">
+                <field name="text">That is correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="X6!~VD+wEOe@.?~Y4w$6">
+                <field name="stateName">fend</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id=":q6c=25gv=FF1CHVKq4~">
+            <value name="intent">
+              <block type="intent_variable" id="#J.ry4Z,M]yBr1rom*8`">
+                <field name="varname" id="pg,Jym7nLns3#-Gm;COc" variabletype="IntentCandidate">fsenten22</field>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="fgU*-]sN)8VxNbG;VVb,">
+                <statement name="utterance">
+                  <block type="utt_text" id="AChs)RW+}|6kcazah8TY">
+                    <field name="text">That is partially correct. It means 'good morning:</field>
+                    <next>
+                      <block type="utt_value" id="D-QP4eh!V^^C3lZbc,N7">
+                        <value name="value">
+                          <block type="variable_get" id="LMhy~eA?bn6)zLuxn`}8">
+                            <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="P0S#CTgYxsSS^/6JaoFw">
+                    <field name="stateName">fend</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="=@3SJHjU47~8Vp|EQ#SK">
+                <statement name="actions">
+                  <block type="say_utterance" id="DZ!`-+ScB4{D.$5jw=x4">
+                    <statement name="utterance">
+                      <block type="utt_text" id="BTl]`|UxEE+^(54vTkiC">
+                        <field name="text">That is not correct. It means 'cozy class'</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="iX6Fog,[J`o!;|HEpT!b">
+                        <field name="stateName">fend</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="rcI8tA7Tk9a6JR)**U!c" x="-5429" y="1235">
+    <field name="stateName">swords52</field>
+    <statement name="actions">
+      <block type="say_utterance" id="~gGZTnv$a0iH`*~KX7oz">
+        <statement name="utterance">
+          <block type="utt_text" id="}A,q8stK.+_0ZEHRUG*n">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="3ElaOR5L{fUWM|T5T8.l">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="I5Vjt=by9dd`_4gmjhIx">
+                <statement name="utterance">
+                  <block type="utt_text" id="U+@EP/+;YXt]}gz2_gh%">
+                    <field name="text">dank je wel</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="GdS2CR#Me7d:_d{Tr|4h">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="VerJihYC4$vvc)H/jHZ[">
+                        <statement name="utterance">
+                          <block type="utt_text" id="LKJIl}KQ))N8wHsssEOA">
+                            <field name="text">mean?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id=".u{e=4:E]^V{XDn:hGgL">
+        <field name="responseText">thank you</field>
+        <statement name="actions">
+          <block type="say_utterance" id="`i4(GBI7`xEU5fer1XYb">
+            <statement name="utterance">
+              <block type="utt_text" id="X8d1_k=[0f5)%(]$nC_H">
+                <field name="text">That's also correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="V(jBbhY[pvQunvu)uKNx">
+                <field name="stateName">ssentence12</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="AusC!W_r%gR0nVv+@S*5">
+            <statement name="actions">
+              <block type="say_utterance" id="@St^TPf/e1hj%NBj%o##">
+                <statement name="utterance">
+                  <block type="utt_text" id="7LmcF`G0T)vorvD=Pzj0">
+                    <field name="text">That is not correct. It means 'thank you'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="%0nUbv!tCZ+3};0PGgg=">
+                    <field name="stateName">ssentence12</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="ZSe_A6gm)}uF|n+GZJrh" x="-3489" y="1153">
+    <field name="stateName">swords5</field>
+    <statement name="actions">
+      <block type="say_utterance" id="scuevXIPig=]4ae;l.w[">
+        <statement name="utterance">
+          <block type="utt_text" id="C3g)g8]hCnD%UoIxwXE;">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="skEmD[SPxFbdr6$JO#}a">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="e_/VA:b-gRi^qztb*#.7">
+                <statement name="utterance">
+                  <block type="utt_text" id="2L:ay%3M9XD{Wt=5FX58">
+                    <field name="text">klas</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id=":Hy8Tb6-ELn/CQ3Pvh*Y">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="ask_utterance" id="eTiP]#`iJnl0kbpvrA36">
+                        <statement name="utterance">
+                          <block type="utt_text" id="0]Ze[#kEAwCc}-R1$Av9">
+                            <field name="text">mean?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="chVG))aZ{U,[^7`w=V[V">
+        <field name="responseText">class</field>
+        <statement name="actions">
+          <block type="say_utterance" id="B4Ij#@:wrjz[mtk;j]vO">
+            <statement name="utterance">
+              <block type="utt_text" id="%q`|t7Qbu,j/{rv:1s,O">
+                <field name="text">That's also correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="sOU^8v$[;}V)M8NFGoif">
+                <field name="stateName">ssentence</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="wk_JoBHQh-[%GcZLq2:!">
+            <statement name="actions">
+              <block type="say_utterance" id="E|cf|F1c0CwW80+7t6_c">
+                <statement name="utterance">
+                  <block type="utt_text" id="WS*I1idikgg9~FB]rCE,">
+                    <field name="text">That is not correct. It means 'class'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id=":XLppJ/RAIy+Xa0/mqu^">
+                    <field name="stateName">ssentence</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="define_intent" id="1s6Gjwk/K:QKevH~LDII" x="-6090" y="1362">
+    <field name="intent_name" id="6pLB34B7rvD#lP:@(:I2" variabletype="IntentCandidate">ssenten22</field>
+    <value name="intent">
+      <block type="intent_simple" id="T;v7O~Uf.X{j8Ntl(v#I">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="Rn-C7][x5Jt_mm;ZyJ??">
+            <field name="text">thank</field>
+            <next>
+              <block type="intent_example" id="2~0-OA^XFIA|:q.H~Yc.">
+                <field name="text">bye</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+  <block type="define_intent" id="/3FyOo!l(C8]hV@aJF4%" x="-4188" y="1325">
+    <field name="intent_name" id="v0?s;vjQkrJlmP-gcmff" variabletype="IntentCandidate">sentence2</field>
+    <value name="intent">
+      <block type="intent_simple" id="ho4pQKY{=[L^YjGGFw?c">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="RebHr4udO7$f()RF[X-;">
+            <field name="text">nice</field>
+            <next>
+              <block type="intent_example" id="!FV^w~=h@5.%Jx,PD%n^">
+                <field name="text">class</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+  <block type="state" id="NL0uhieFaDoe4fpWxX2/" x="-587" y="1249">
+    <field name="stateName">fwords5</field>
+    <statement name="actions">
+      <block type="action_gesture_param" id="a.^~+TqzT]:kqQ`38acN">
+        <field name="gesture">BigSmile</field>
+        <value name="strength">
+          <shadow type="text" id="EIOzhqZHCw;WV^KmgvH,">
+            <field name="value">1.0</field>
+          </shadow>
+        </value>
+        <value name="duration">
+          <shadow type="text" id="{I865olmx#V;^5tuLpM7">
+            <field name="value">5.0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="say_utterance" id="r,J6KWpujK)6.2~pRu*f">
+            <statement name="utterance">
+              <block type="utt_text" id="n%LQO!sWR,?[/MpI/mGI">
+                <field name="text">What does </field>
+              </block>
+            </statement>
+            <next>
+              <block type="action_voice" id="H~!BPj18GDqs=VqBTd?u">
+                <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+                <next>
+                  <block type="say_utterance" id="2vTR_x[,gCe!qhPn=6gD">
+                    <statement name="utterance">
+                      <block type="utt_text" id="9*0HP}}aD+G^eF|D$kXJ">
+                        <field name="text">fijne</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="action_voice" id="e]Mh0`U^%7{9$;h:gr+v">
+                        <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                        <next>
+                          <block type="ask_utterance" id="fVntw_4~HJgENW]Pa%W}">
+                            <statement name="utterance">
+                              <block type="utt_text" id="NI}xHHoK`D5D}Ny{m[N:">
+                                <field name="text">mean?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="/8{N-D]_,W%Ohn!1K0mJ">
+        <field name="responseText">fine</field>
+        <statement name="actions">
+          <block type="say_utterance" id="gw~yLW#AA?WFQ]cq]q_(">
+            <statement name="utterance">
+              <block type="utt_value" id="`vm}dr06p8u!C/UQq:W}">
+                <value name="value">
+                  <block type="variable_get" id="_%TMnnh+RW4fT))c4s[w">
+                    <field name="varname" id="PI3j]v,]2oV3c_4Gw-^^" variabletype="GenericValue">name</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="utt_text" id="?+81%Wd[!r5+X|Qj)Gn5">
+                    <field name="text">That's also correct! Nice</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="qfS0isSCIB6G~]TMyP,0">
+                <field name="stateName">fsentence</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="Q-2+RISnRpNO1mP8~*Rv">
+            <statement name="actions">
+              <block type="say_utterance" id="#8;^@!`4``cP;v4XH|@a">
+                <statement name="utterance">
+                  <block type="utt_text" id="($TDXn_9TqpGp}pF%J-P">
+                    <field name="text">That is not correct. It means 'good morning'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="a_W}mUwZ8ED6l@JEr2Ko">
+                    <field name="stateName">fsentence</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="O1{]:ktYyx)2(S5(1#6+" x="1512" y="1151">
+    <field name="stateName">fwords52</field>
+    <statement name="actions">
+      <block type="say_utterance" id="|oMt,U,m8#}tB3m4q4%^">
+        <statement name="utterance">
+          <block type="utt_text" id="yiUs]++Ru|sJS0,9/j[9">
+            <field name="text">What does </field>
+          </block>
+        </statement>
+        <next>
+          <block type="action_voice" id="$!IFAQ-9d,!+QfV@omw5">
+            <field name="voice">Laura-Neural (nl-NL) - Amazon Polly</field>
+            <next>
+              <block type="say_utterance" id="Yc0nvf1Ivr!aOu^Z!7+x">
+                <statement name="utterance">
+                  <block type="utt_text" id="E-f1a]Segw,s7#e$LgFA">
+                    <field name="text">goedemorgen</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="action_voice" id="?,+)2Xs#)Ht:#a!)*vNs">
+                    <field name="voice">Danielle-Neural (en-US) - Amazon Polly</field>
+                    <next>
+                      <block type="action_gesture_param" id="APaQEOM#c`DGGnD;U:b}">
+                        <field name="gesture">BigSmile</field>
+                        <value name="strength">
+                          <shadow type="text" id="=WoPXeC4+q(Fs{DtIaMr">
+                            <field name="value">1.0</field>
+                          </shadow>
+                        </value>
+                        <value name="duration">
+                          <shadow type="text" id="fjd^-%WQCKsy,xhz!jM6">
+                            <field name="value">5.0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="ask_utterance" id="S%*D*Zk2#gv!9Qc4RIzg">
+                            <statement name="utterance">
+                              <block type="utt_text" id="PVGU%9;*O],!Q}U7dZ-?">
+                                <field name="text">mean?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="+kO-r4Q-FUVrQ3N_`jUc">
+        <field name="responseText">good morning</field>
+        <statement name="actions">
+          <block type="say_utterance" id="YX]prc_HT[fQOxt$4B*Y">
+            <statement name="utterance">
+              <block type="utt_text" id="C3O}Hnsc})hb7RXRf?,y">
+                <field name="text">That's also correct!</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="|m)-Vh!u=)Z5TN;uRqHV">
+                <field name="stateName">fsentence12</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_any" id="u`^#:x1O4|uL8a]DTsjw">
+            <statement name="actions">
+              <block type="say_utterance" id="@_gBThgx-a{IM`h4EjO-">
+                <statement name="utterance">
+                  <block type="utt_text" id="S$f/U22quI~09qS.eqGO">
+                    <field name="text">Sorry that's not correct. You say it in the morning: 'good morning!'.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="SitCL$^csc_d})kM:UFt">
+                    <field name="stateName">fsentence12</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="define_intent" id="1($;D5|T,]_Be9G2cWUp" x="161" y="1374">
+    <field name="intent_name" id="mA42/A)VqjU5FtWo(D)3" variabletype="IntentCandidate">fsenten2</field>
+    <value name="intent">
+      <block type="intent_simple" id="9GSv_NZa|3DzGM)v/)-2">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="-[d+;w?l]AS@C.R[V-yD">
+            <field name="text">Have</field>
+            <next>
+              <block type="intent_example" id="(ocU_Mp4@x=8O{cA?4#I">
+                <field name="text">nice</field>
+                <next>
+                  <block type="intent_example" id="`WXjv|^[JKBj?[}ITdoR">
+                    <field name="text">day</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+  <block type="define_intent" id="adLKAHj}KL,Rkwm#SW){" x="2314" y="1369">
+    <field name="intent_name" id="pg,Jym7nLns3#-Gm;COc" variabletype="IntentCandidate">fsenten22</field>
+    <value name="intent">
+      <block type="intent_simple" id="=7ktJU?P*Ghr0yGG[CAj">
+        <statement name="exampleBlocks">
+          <block type="intent_example" id="6dp5VEHt@rnO5UJ@benn">
+            <field name="text">good</field>
+            <next>
+              <block type="intent_example" id="r~Q;J+A*euE]]9zX_X#I">
+                <field name="text">morning</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </value>
+  </block>
+</xml>
