@@ -1,12 +1,14 @@
 # HCI
 A Human-Computer Interaction project (completed a year and a half before the upload)
 
+<code>
 src/
-├── subject/              contains subject documents
-├── tests/                contains quizzes
+│	└── subject/              contains subject documents
+│	└── tests/                contains quizzes
 ├── LingAI Blockly Code.xml   the Blockly code
 ├── Results chart.png         results chart
 └── Results.pdf               results & analysis
+</code>
 
 ------------------------------
 
